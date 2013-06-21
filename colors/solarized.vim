@@ -434,7 +434,7 @@ endif
 " Highlighting primitives"{{{
 " ---------------------------------------------------------------------
 
-exe "let s:bg_none      = ' ".s:vmode."bg=".s:none   ."'"
+exe "let s:bg_none      = ' ". s:vmode."bg=".s:none   ."'"
 exe "let s:bg_back      = ' ".s:vmode."bg=".s:back   ."'"
 exe "let s:bg_base03    = ' ".s:vmode."bg=".s:base03 ."'"
 exe "let s:bg_base02    = ' ".s:vmode."bg=".s:base02 ."'"
@@ -673,6 +673,12 @@ exe "hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02
 exe "hi! Cursor"         .s:fmt_none   .s:fg_base03 .s:bg_base0
 hi! link lCursor Cursor
 exe "hi! MatchParen"     .s:fmt_bold   .s:fg_red    .s:bg_base01
+
+"}}}
+" plugin specific highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! EasyMotionTarget" .s:fmt_none .s:fg_red    .s:bg_back
+exe "hi! EasyMotionShade"  .s:fmt_none .s:fg_base00 .s:bg_back
 
 "}}}
 " vim syntax highlighting "{{{
